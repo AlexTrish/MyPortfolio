@@ -1,9 +1,70 @@
-:root {
-    $bg: #fff;
-    color-scheme: light;
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap');
+
+
+.overpass-mono-Light {
+    font-family: "Overpass Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+.overpass-mono-Regular {
+    font-family: "Overpass Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.overpass-mono-Medium {
+    font-family: "Overpass Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+.overpass-mono-SemiBold {
+    font-family: "Overpass Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+
+.overpass-mono-Bold {
+  font-family: "Overpass Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
-:root {
-    $bg: #000;
-    color-scheme: dark;
+body {
+    width: 100%;
+    height: auto;
+
+    background-color: #262626;
 }
+
+#root {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Overpass Mono", serif;
+}
+
+
+// vars
+$navbar-color: #373737cc;
+$text-color: #ffffff;
+$text-noactive: #ffffff80;
+$accent-active: #BB4E4E;
+$accent-color: #D35858;
+$accent-noactive: #d3585880;
+$sub-title: #A7A7A7;
+$citat: #BCBCBC;
+$citat-name: #7D7D7D;

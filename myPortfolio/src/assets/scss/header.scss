@@ -1,0 +1,93 @@
+@use '../../index'  as *;
+
+.container-navbar {
+    width: 73vw;
+    height: 2.65vw;
+    border-radius: 5px;
+
+    position: fixed;
+    top: 20px;
+    margin-left: auto;
+    left: 0;
+    margin-right: auto;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 60px;
+
+    color: $text-color;
+    background-color: $navbar-color;
+
+    span {
+        color: $accent-color;
+    }
+
+    a:visited {
+        color: $text-color;
+    }
+}
+
+.h-logo {
+    width: auto;
+    height: 1.55vw;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: 700;
+
+    span {
+        font-size: 1vw;
+        font-weight: 400;
+        letter-spacing: -0.25vw;
+    }
+}
+
+.h-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    text-align: center;
+    font-size: 16px;
+
+    button {
+        text-align: center;
+        color: $text-noactive;
+        transition: all 0.25s;
+        
+        span {
+            color: $accent-noactive;
+            transition: all 0.25s;
+        }
+    }
+    button:hover {
+        color: $text-color;
+
+        span {
+            color: $accent-color;
+        }
+    }
+    button:focus {
+        color: $text-color;
+        span {
+            color: $accent-color;
+        }
+    }
+    .lang {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: $text-color;
+        svg {
+            fill: $text-color;
+        }
+    }
+    .lang:hover {
+        color: $text-noactive;
+        svg {
+            fill: $text-noactive;
+        }
+    }
+}
