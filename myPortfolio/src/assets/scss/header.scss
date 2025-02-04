@@ -1,93 +1,438 @@
 @use '../../index'  as *;
 
-.container-navbar {
-    width: 73vw;
-    height: 2.65vw;
-    border-radius: 5px;
 
-    position: fixed;
-    top: 20px;
-    margin-left: auto;
-    left: 0;
-    margin-right: auto;
-    right: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 60px;
-
-    color: $text-color;
-    background-color: $navbar-color;
-
-    span {
-        color: $accent-color;
-    }
-
-    a:visited {
+@media (max-width: 3840px) {
+    .container-navbar {
+        width: 73vw;
+        height: 2.65vw;
+        border-radius: 0.15vw;
+    
+        position: fixed;
+        top: 1vw;
+        margin-left: auto;
+        left: 0;
+        margin-right: auto;
+        right: 0;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0vw 3.15vw;
+    
         color: $text-color;
+        background-color: $navbar-color;
+    
+        span {
+            color: $accent-color;
+        }
+    
+        a:visited {
+            color: $text-color;
+        }
     }
-}
-
-.h-logo {
-    width: auto;
-    height: 1.55vw;
-    text-align: center;
-    font-size: 1.5vw;
-    font-weight: 700;
-
-    span {
-        font-size: 1vw;
-        font-weight: 400;
-        letter-spacing: -0.25vw;
-    }
-}
-
-.h-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 45px;
-    text-align: center;
-    font-size: 16px;
-
-    button {
+    
+    .h-logo {
+        width: auto;
+        height: 1.55vw;
         text-align: center;
-        color: $text-noactive;
-        transition: all 0.25s;
-        
+        font-size: 1.5vw;
+        font-weight: 700;
+    
         span {
-            color: $accent-noactive;
-            transition: all 0.25s;
+            font-size: 1vw;
+            font-weight: 400;
+            letter-spacing: -0.25vw;
         }
     }
-    button:hover {
-        color: $text-color;
-
-        span {
-            color: $accent-color;
-        }
-    }
-    button:focus {
-        color: $text-color;
-        span {
-            color: $accent-color;
-        }
-    }
-    .lang {
+    
+    .h-menu {
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        color: $text-color;
-        svg {
-            fill: $text-color;
+
+        .menu-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.75vw;
+            text-align: center;
+    
+            button {
+                text-align: center;
+                font-size: 0.90vw;
+                color: $text-noactive;
+                transition: all 0.25s;
+                
+                span {
+                    color: $accent-noactive;
+                    transition: all 0.25s;
+                }
+            }
+            button:hover {
+                color: $text-color;
+        
+                span {
+                    color: $accent-color;
+                }
+            }
+            button:focus {
+                color: $text-color;
+                span {
+                    color: $accent-color;
+                }
+            }
+            #lang {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: $text-color;
+                svg {
+                    fill: $text-color;
+                }
+            }
+            #lang:hover {
+                color: $text-noactive;
+                svg {
+                    fill: $text-noactive;
+                }
+            }
         }
     }
-    .lang:hover {
-        color: $text-noactive;
-        svg {
-            fill: $text-noactive;
+
+    .burgerMenu {
+        display: none;
+    }
+}
+
+@media (max-width: 1920px) {
+    .container-navbar {
+        width: 73vw;
+        height: 2.65vw;
+        border-radius: 0.15vw;
+    
+        position: fixed;
+        top: 1vw;
+        margin-left: auto;
+        left: 0;
+        margin-right: auto;
+        right: 0;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0vw 3.15vw;
+    
+        color: $text-color;
+        background-color: $navbar-color;
+    
+        span {
+            color: $accent-color;
+        }
+    
+        a:visited {
+            color: $text-color;
+        }
+    }
+    
+    .h-logo {
+        width: auto;
+        height: 1.55vw;
+        text-align: center;
+        font-size: 1.5vw;
+        font-weight: 700;
+    
+        span {
+            font-size: 1vw;
+            font-weight: 400;
+            letter-spacing: -0.25vw;
+        }
+    }
+    
+    .h-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .menu-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.75vw;
+            text-align: center;
+
+            button {
+                text-align: center;
+                font-size: 0.90vw;
+                color: $text-noactive;
+                transition: all 0.25s;
+                
+                span {
+                    color: $accent-noactive;
+                    transition: all 0.25s;
+                }
+            }
+            button:hover {
+                color: $text-color;
+        
+                span {
+                    color: $accent-color;
+                }
+            }
+            button:focus {
+                color: $text-color;
+                span {
+                    color: $accent-color;
+                }
+            }
+            #lang {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: $text-color;
+                svg {
+                    fill: $text-color;
+                }
+            }
+            #lang:hover {
+                color: $text-noactive;
+                svg {
+                    fill: $text-noactive;
+                }
+            }
+        }
+    }
+
+    .burgerMenu {
+        display: none;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container-navbar {
+        width: 73vw;
+        height: 2.65vw;
+        border-radius: 0.15vw;
+    
+        position: fixed;
+        top: 1vw;
+        margin-left: auto;
+        left: 0;
+        margin-right: auto;
+        right: 0;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0vw 1.575vw;
+    
+        color: $text-color;
+        background-color: $navbar-color;
+    
+        span {
+            color: $accent-color;
+        }
+    
+        a:visited {
+            color: $text-color;
+        }
+    }
+    
+    .h-logo {
+        width: auto;
+        height: 1.55vw;
+        text-align: center;
+        font-size: 1.55vw;
+        font-weight: 700;
+    
+        span {
+            font-size: 1vw;
+            font-weight: 400;
+            letter-spacing: -0.25vw;
+        }
+    }
+    
+    .h-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .menu-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.75vw;
+            text-align: center;
+    
+            button {
+                text-align: center;
+                font-size: 0.95vw;
+                color: $text-noactive;
+                transition: all 0.25s;
+                
+                span {
+                    color: $accent-noactive;
+                    transition: all 0.25s;
+                }
+            }
+            button:hover {
+                color: $text-color;
+        
+                span {
+                    color: $accent-color;
+                }
+            }
+            button:focus {
+                color: $text-color;
+                span {
+                    color: $accent-color;
+                }
+            }
+            #lang {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: $text-color;
+                svg {
+                    fill: $text-color;
+                }
+            }
+            #lang:hover {
+                color: $text-noactive;
+                svg {
+                    fill: $text-noactive;
+                }
+            }
+        }
+    }
+
+    .burgerMenu {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container-navbar {
+        width: 80vw;
+        height: 3.75vw;
+        border-radius: 0.25vw;
+    
+        position: fixed;
+        top: 1vw;
+        margin-left: auto;
+        left: 0;
+        margin-right: auto;
+        right: 0;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0vw 1.575vw;
+    
+        color: $text-color;
+        background-color: $navbar-color;
+    
+        span {
+            color: $accent-color;
+        }
+    
+        a:visited {
+            color: $text-color;
+        }
+    }
+    
+    .h-logo {
+        width: auto;
+        height: 2.75vw;
+        text-align: center;
+        font-size: 2.5vw;
+        font-weight: 700;
+    
+        span {
+            font-size: 1vw;
+            font-weight: 400;
+            letter-spacing: -0.25vw;
+        }
+    }
+    
+    .h-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    
+        .menu-container {
+            .btn-menu {
+                display: none;
+            }
+        }
+
+        #lang {
+            display: none !important;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .container-navbar {
+        width: 100%;
+        height: 8vw;
+        border-radius: 0.45vw;
+    
+        position: fixed;
+        top: 0vw;
+        margin: 0vw;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0vw 5vw;
+    
+        color: $text-color;
+        background-color: $navbar-color;
+    
+        span {
+            color: $accent-color;
+        }
+    
+        a:visited {
+            color: $text-color;
+        }
+    }
+    
+    .h-logo {
+        width: auto;
+        height: 5.5vw;
+        text-align: center;
+        font-size: 5.5vw;
+        font-weight: 700;
+    
+        span {
+            font-size: 3.75vw;
+            font-weight: 400;
+            letter-spacing: -0.25vw;
+        }
+    }
+    
+    .h-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    
+        .menu-container {
+            .btn-menu {
+                display: none;
+            }
+        }
+
+        #lang {
+            display: none !important;
         }
     }
 }
